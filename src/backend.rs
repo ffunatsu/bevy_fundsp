@@ -13,7 +13,7 @@ pub mod kira;
 
 /// The default backend.
 #[allow(clippy::module_name_repetitions)]
-#[cfg(feature = "bevy_audio")]
+#[cfg(all(feature = "bevy_audio", not(feature = "kira")))]
 pub type DefaultBackend = bevy_audio::BevyAudioBackend;
 /// The default backend.
 #[allow(clippy::module_name_repetitions)]

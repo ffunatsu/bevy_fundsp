@@ -25,7 +25,7 @@ fn triangle_wave() -> impl AudioUnit {
 
 fn interactive_audio(
     input: Res<ButtonInput<KeyCode>>,
-    mut assets: ResMut<Assets<AudioSource>>,
+    mut assets: ResMut<Assets<bevy_kira_audio::AudioSource>>,
     dsp_manager: Res<DspManager>,
     audio: ResMut<Audio>,
 ) {

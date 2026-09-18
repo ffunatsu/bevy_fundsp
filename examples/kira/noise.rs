@@ -17,7 +17,7 @@ fn white_noise() -> impl AudioUnit {
 }
 
 fn play_noise(
-    mut assets: ResMut<Assets<AudioSource>>,
+    mut assets: ResMut<Assets<bevy_kira_audio::AudioSource>>,
     dsp_manager: Res<DspManager>,
     audio: Res<Audio>,
 ) {

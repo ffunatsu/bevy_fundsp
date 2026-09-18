@@ -126,7 +126,5 @@ fn play_piano(
             .get_graph_by_id(&piano_id.0)
             .unwrap_or_else(|| panic!("DSP source not found!")),
     );
-    commands.spawn(AudioPlayer {
-        0: source
-    });
+    commands.spawn(AudioPlayer { 0: source });
 }

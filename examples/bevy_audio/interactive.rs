@@ -40,14 +40,14 @@ fn setup(
 ) {
     commands.spawn((
         AudioPlayer {
-            0: assets.add(dsp_manager.get_graph(sine_wave).unwrap())
+            0: assets.add(dsp_manager.get_graph(sine_wave).unwrap()),
         },
         Dsp::Sine,
     ));
 
     commands.spawn((
         AudioPlayer {
-            0: assets.add(dsp_manager.get_graph(triangle_wave).unwrap())
+            0: assets.add(dsp_manager.get_graph(triangle_wave).unwrap()),
         },
         Dsp::Triangle,
     ));

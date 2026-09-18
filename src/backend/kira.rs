@@ -6,10 +6,9 @@ use {
     bevy::prelude::App,
     bevy_kira_audio::AudioSource,
     kira::{
-        Frame, info::Info, sound::{
-            Sound, SoundData, static_sound::StaticSoundData
-        }
-        // OutputDestination,
+        info::Info,
+        sound::{static_sound::StaticSoundData, Sound, SoundData}, // OutputDestination,
+        Frame,
     },
     std::io::Cursor,
 };
@@ -29,12 +28,7 @@ impl Sound for Iter {
     // }
 
     #[allow(clippy::cast_possible_truncation)]
-    fn process(
-        &mut self,
-        out: &mut [Frame],
-        dt: f64,
-        _: &Info
-    ) {
+    fn process(&mut self, out: &mut [Frame], dt: f64, _: &Info) {
         self.advance(dt as f32);
         let frame = self.sample();
         out[0].left = frame[0];

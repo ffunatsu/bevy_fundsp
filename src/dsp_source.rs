@@ -3,7 +3,7 @@
 
 use {
     crate::dsp_graph::DspGraph,
-    bevy::{asset::Asset, reflect::{TypePath}},
+    bevy::{asset::Asset, reflect::TypePath},
     fundsp::{audiounit::AudioUnit, wave::Wave},
     std::{cell::RefCell, sync::Arc},
 };
