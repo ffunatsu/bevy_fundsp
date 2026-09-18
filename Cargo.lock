@@ -649,7 +649,7 @@ dependencies = [
 
 [[package]]
 name = "bevy_fundsp"
-version = "0.11.0"
+version = "0.12.0"
 dependencies = [
  "bevy",
  "bevy_kira_audio",
